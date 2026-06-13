@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Detail - MBX Homes</title>
+  <meta name="description" content="Book this stunning MBX Homes vacation rental in Los Angeles. View pictures, amenities, location, rates, and availability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo-link">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="36" height="36">
+          <rect x="8" y="20" width="44" height="32" rx="2" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <polyline points="4,24 30,6 56,24" fill="none" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M22 52 V36 h16 v16" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <rect x="22" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+          <rect x="32" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">MBX</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="airbnb.html" class="nav-link" id="nav-airbnb">AIRBNB</a>
+        <a href="properties.html" class="nav-link nav-dropdown-trigger" id="nav-properties">
+          All properties <span class="dropdown-arrow">▾</span>
+          <div class="dropdown-menu" id="nav-dropdown">
+            <a href="properties.html" class="dropdown-item">All Properties</a>
+            <a href="properties.html?type=vacation" class="dropdown-item">Vacation Homes</a>
+            <a href="properties.html?type=apartment" class="dropdown-item">Apartments</a>
+            <a href="properties.html?location=la" class="dropdown-item">Los Angeles</a>
+            <a href="properties.html?location=culver" class="dropdown-item">Culver City</a>
+            <a href="properties.html?location=bigbear" class="dropdown-item">Big Bear</a>
+          </div>
+        </a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact us</a>
+        <div class="currency-selector" id="currency-selector">
+          <span>USD</span>
+          <span class="dropdown-arrow">▾</span>
+          <div class="currency-dropdown">
+            <div class="currency-item active">USD - US Dollar</div>
+            <div class="currency-item">EUR - Euro</div>
+            <div class="currency-item">GBP - British Pound</div>
+            <div class="currency-item">CAD - Canadian Dollar</div>
+          </div>
+        </div>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PROPERTY HERO IMAGE -->
+  <div class="property-hero" id="property-hero" onclick="openAllPictures()">
+    <img src="images/prop1.png" alt="Property hero" class="property-hero-img" id="property-hero-img" />
+    <button class="view-more-pics-btn" id="view-more-pics-btn" onclick="openAllPictures(event)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      VIEW MORE PICTURES
+    </button>
+  </div>
+
+  <!-- PROPERTY TABS -->
+  <nav class="property-tabs-bar" id="property-tabs-bar" aria-label="Property sections">
+    <a href="#description" class="property-tab active" id="tab-description">Description</a>
+    <a href="#pictures" class="property-tab" id="tab-pictures">Pictures</a>
+    <a href="#amenities" class="property-tab" id="tab-amenities">Amenities</a>
+    <a href="#location" class="property-tab" id="tab-location">Location</a>
+    <a href="#rates" class="property-tab" id="tab-rates">Rates</a>
+    <a href="#availability" class="property-tab" id="tab-availability">Availability</a>
+    <a href="#reviews" class="property-tab" id="tab-reviews">Reviews</a>
+  </nav>
+
+  <!-- PROPERTY CONTENT -->
+  <div class="property-content" id="property-content">
+
+    <!-- DESCRIPTION -->
+    <section id="description">
+      <p class="property-type-badge" id="property-type">Vacation Home</p>
+      <h1 class="property-title-h1" id="property-title">Sylmar Single Level Home | Hilltop | Piano | Gated</h1>
+
+      <div class="property-stats" id="property-stats">
+        <div class="property-stat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          8 Guests
+        </div>
+        <div class="property-stat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          3 Bedrooms
+        </div>
+        <div class="property-stat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M2 12h2M20 12h2M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/></svg>
+          2 Beds
+        </div>
+        <div class="property-stat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11H3v11h18V11H15M3 11V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4M8 7V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/></svg>
+          2 Bathrooms
+        </div>
+      </div>
+
+      <p class="property-description" id="property-description">
+        Welcome to our single story, 3 bedroom gated home in Sylmar! Our fully remodeled home offers a large layout, modern furnishings, dedicated workspace, and plenty of parking. The home was designed with comfort in mind, and includes a stocked kitchen and is well equipped overall. The home is ideal for extended stays and relocations. Need anything specific? Please inquire! Guests will enter via their own gate and front door code. **There is one locked bedroom in the home** We do not live on site, but just a quick call away.
+      </p>
+
+      <p class="highlights-label">Highlights</p>
+      <div class="highlights-list" id="highlights-list">
+        <span class="highlight-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Parking
+        </span>
+        <span class="highlight-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+          Wireless Broadband Internet
+        </span>
+      </div>
+    </section>
+
+    <!-- PICTURES -->
+    <section id="pictures" class="pictures-section">
+      <h2 class="pictures-title">Pictures</h2>
+      <div class="pictures-grid" id="pictures-grid">
+        <div class="pic-item"><img src="images/prop1.png" alt="Living Room" onclick="openGallery(0)" /></div>
+        <div class="pic-item"><img src="images/prop2.png" alt="Kitchen" onclick="openGallery(1)" /></div>
+        <div class="pic-item"><img src="images/prop3.png" alt="Bedroom" onclick="openGallery(2)" /></div>
+        <div class="pic-item"><img src="images/prop4.png" alt="Bathroom" onclick="openGallery(3)" /></div>
+        <div class="pic-item"><img src="images/prop5.png" alt="Exterior" onclick="openGallery(4)" /></div>
+        <div class="pic-item"><img src="images/hero.png" alt="Full exterior view" onclick="openGallery(5)" /></div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" style="margin-top:40px">
+      <h2 class="pictures-title">Amenities</h2>
+      <div class="amenities-grid" id="amenities-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:600px">
+        <div class="highlight-badge">🍳 Kitchen</div>
+        <div class="highlight-badge">📶 WiFi</div>
+        <div class="highlight-badge">🚗 Parking</div>
+        <div class="highlight-badge">🧺 Washing Machine</div>
+        <div class="highlight-badge">❄️ Air Conditioning</div>
+        <div class="highlight-badge">📺 Smart TV</div>
+        <div class="highlight-badge">🔥 Fireplace</div>
+        <div class="highlight-badge">🪴 Garden</div>
+        <div class="highlight-badge">🔒 Self Check-in</div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" style="margin-top:40px">
+      <h2 class="pictures-title">Location</h2>
+      <p style="font-size:14px;color:#666;margin-bottom:16px;display:flex;align-items:center;gap:6px">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e8604c"/></svg>
+        Los Angeles, United States
+      </p>
+      <div style="height:300px;border-radius:12px;overflow:hidden;border:1px solid #e0e0e0">
+        <iframe
+          width="100%"
+          height="300"
+          style="border:none;border-radius:12px"
+          loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.8!2d-118.4!3d34.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2963ee6b26e7b%3A0x37f9de7f1e4b0d4!2sSylmar%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1718000000001!5m2!1sen!2sus"
+          title="Property location map"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- RATES -->
+    <section id="rates" style="margin-top:40px">
+      <h2 class="pictures-title">Rates</h2>
+      <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:24px;max-width:500px">
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0">
+          <span style="font-size:14px;color:#444">Nightly rate (weekday)</span>
+          <span style="font-size:14px;font-weight:600">from $149/night</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0">
+          <span style="font-size:14px;color:#444">Nightly rate (weekend)</span>
+          <span style="font-size:14px;font-weight:600">from $199/night</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0f0f0">
+          <span style="font-size:14px;color:#444">Weekly rate</span>
+          <span style="font-size:14px;font-weight:600">from $999/week</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0">
+          <span style="font-size:14px;color:#444">Monthly rate</span>
+          <span style="font-size:14px;font-weight:600">from $3,200/month</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABILITY -->
+    <section id="availability" style="margin-top:40px;margin-bottom:40px">
+      <h2 class="pictures-title">Availability</h2>
+      <div id="availability-calendar" style="max-width:400px;background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:24px">
+        <p style="font-size:14px;color:#666;line-height:1.6">Select your check-in and check-out dates using the booking bar below to check availability for this property.</p>
+        <p style="margin-top:12px;font-size:14px;color:#e8604c;font-weight:500">✓ Generally available - contact us to confirm</p>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" style="margin-top:40px">
+      <h2 class="pictures-title">Reviews</h2>
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:700px">
+        <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:20px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+            <div style="width:40px;height:40px;border-radius:50%;background:#e8604c;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px">J</div>
+            <div>
+              <p style="font-weight:600;font-size:14px">James R.</p>
+              <p style="font-size:12px;color:#999">March 2026</p>
+            </div>
+            <div style="margin-left:auto;color:#f59e0b;font-size:14px">★★★★★</div>
+          </div>
+          <p style="font-size:14px;color:#555;line-height:1.6">Amazing property! Super clean, very spacious, and exactly as described. The host was incredibly responsive and accommodating. Would definitely stay again!</p>
+        </div>
+        <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:20px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+            <div style="width:40px;height:40px;border-radius:50%;background:#6366f1;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px">S</div>
+            <div>
+              <p style="font-weight:600;font-size:14px">Sarah M.</p>
+              <p style="font-size:12px;color:#999">February 2026</p>
+            </div>
+            <div style="margin-left:auto;color:#f59e0b;font-size:14px">★★★★★</div>
+          </div>
+          <p style="font-size:14px;color:#555;line-height:1.6">Perfect for our family vacation. Great neighborhood, quiet area, beautiful views from the property. Everything was stocked and ready to use. Highly recommend!</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- STICKY BOOKING BAR -->
+  <div class="booking-sticky-bar" id="booking-sticky-bar">
+    <div class="booking-sticky-info" id="booking-sticky-info">
+      <p class="booking-sticky-title" id="sticky-title">Sylmar Single Level Home | Hilltop | Piano | Gated</p>
+      <p class="booking-sticky-location" id="sticky-location">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#999"/></svg>
+        Los Angeles, United States
+      </p>
+    </div>
+    <div class="booking-sticky-fields" id="booking-sticky-fields">
+      <div class="sticky-field">
+        <input type="date" id="sticky-checkin" placeholder="Check-in" />
+      </div>
+      <div class="sticky-field">
+        <input type="date" id="sticky-checkout" placeholder="Check-out" />
+      </div>
+      <div class="sticky-field">
+        <select id="sticky-guests">
+          <option value="1">1 adult</option>
+          <option value="2">2 adults</option>
+          <option value="3">3 adults</option>
+          <option value="4">4 adults</option>
+          <option value="6">6 adults</option>
+          <option value="8">8 adults</option>
+        </select>
+      </div>
+    </div>
+    <button class="book-now-btn" id="book-now-btn">Book Now</button>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Gallery image" />
+    <button class="lightbox-next" id="lightbox-next">›</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Dynamic property based on URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    const propId = urlParams.get('id') || '1';
+
+    const properties = {
+      '1': {
+        title: 'Luxury HighRise Condo | City Views | Gym',
+        type: 'Apartment',
+        location: 'Los Angeles, United States',
+        img: 'images/prop1.png',
+        guests: 3, beds: 1, bedrooms: 1, bathrooms: 1,
+        desc: 'Experience the best of downtown Los Angeles from this stunning luxury high-rise condo. Enjoy breathtaking city views, modern furnishings, and resort-style amenities including a gym, pool, and rooftop deck. Perfect for business travelers and couples looking for a premium urban retreat.'
+      },
+      '2': {
+        title: '2-Bedroom | FREE Parking | Pool | Gym',
+        type: 'Apartment',
+        location: 'Culver City, United States',
+        img: 'images/prop2.png',
+        guests: 4, beds: 2, bedrooms: 2, bathrooms: 2,
+        desc: 'Beautiful and modern 2-bedroom condo in the heart of Culver City. Free parking included! Enjoy resort-style amenities including a heated pool, fully equipped gym, and rooftop lounge. Steps from world-class dining, shopping, and entertainment.'
+      },
+      '3': {
+        title: '1BD | Condo | Great Spot | Rooftop Pool',
+        type: 'Apartment',
+        location: 'Los Angeles, United States',
+        img: 'images/prop3.png',
+        guests: 2, beds: 1, bedrooms: 1, bathrooms: 1,
+        desc: 'Chic and stylish 1-bedroom condo in an amazing location with access to a stunning rooftop pool. Perfect for couples or solo travelers who want to experience the best of Los Angeles living.'
+      },
+      '4': {
+        title: 'LUX, Trendy, Spacious Condo | DTLA',
+        type: 'Apartment',
+        location: 'Los Angeles, United States',
+        img: 'images/prop4.png',
+        guests: 4, beds: 2, bedrooms: 2, bathrooms: 2,
+        desc: 'Luxurious and trendy condo in the heart of Downtown Los Angeles. Featuring bold, contemporary design with premium furnishings, city views, and high-end finishes throughout. Perfect for those who want to live the LA luxury lifestyle.'
+      },
+      '5': {
+        title: 'Big Bear Village 1BD | Cabin Retreat',
+        type: 'Vacation Home',
+        location: 'Big Bear, United States',
+        img: 'images/prop5.png',
+        guests: 4, beds: 2, bedrooms: 1, bathrooms: 1,
+        desc: 'Escape to this cozy cabin retreat in the heart of Big Bear Village. Perfect for skiing, hiking, and outdoor adventures. Warm, rustic interiors with a fireplace and all the comforts of home.'
+      },
+      '11': {
+        title: 'Sylmar Single Level Home | Hilltop | Piano | Gated',
+        type: 'Vacation Home',
+        location: 'Los Angeles, United States',
+        img: 'images/prop1.png',
+        guests: 8, beds: 2, bedrooms: 3, bathrooms: 2,
+        desc: 'Welcome to our single story, 3 bedroom gated home in Sylmar! Our fully remodeled home offers a large layout, modern furnishings, dedicated workspace, and plenty of parking. The home was designed with comfort in mind, and includes a stocked kitchen and is well equipped overall.'
+      }
+    };
+
+    function loadProperty() {
+      const prop = properties[propId] || properties['11'];
+      if (!prop) return;
+
+      const titleEl = document.getElementById('property-title');
+      const typeEl = document.getElementById('property-type');
+      const locationEl = document.querySelector('.booking-sticky-location');
+      const heroImg = document.getElementById('property-hero-img');
+      const stickyTitle = document.getElementById('sticky-title');
+      const descEl = document.getElementById('property-description');
+
+      if (titleEl) titleEl.textContent = prop.title;
+      if (typeEl) typeEl.textContent = prop.type;
+      if (heroImg) heroImg.src = prop.img;
+      if (heroImg) heroImg.alt = prop.title;
+      if (stickyTitle) stickyTitle.textContent = prop.title;
+      if (descEl) descEl.textContent = prop.desc;
+      document.title = prop.title + ' - MBX Homes';
+
+      // Update stats
+      const stats = document.getElementById('property-stats');
+      if (stats) {
+        stats.children[0].lastChild.textContent = ` ${prop.guests} Guests`;
+        if (stats.children[1]) stats.children[1].lastChild.textContent = ` ${prop.bedrooms} Bedrooms`;
+        if (stats.children[2]) stats.children[2].lastChild.textContent = ` ${prop.beds} Beds`;
+      }
+    }
+
+    loadProperty();
+
+    // Gallery images
+    const galleryImages = [
+      'images/prop1.png',
+      'images/prop2.png',
+      'images/prop3.png',
+      'images/prop4.png',
+      'images/prop5.png',
+      'images/hero.png'
+    ];
+
+    function openGallery(idx) {
+      if (window.openLightbox) {
+        window.openLightbox(galleryImages, idx);
+      }
+    }
+
+    function openAllPictures(e) {
+      if (e) e.stopPropagation();
+      openGallery(0);
+    }
+
+    // Active tab on scroll
+    const tabs = document.querySelectorAll('.property-tab');
+    const sections = ['description', 'pictures', 'amenities', 'location', 'rates', 'availability', 'reviews'];
+
+    function updateActiveTab() {
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 140) current = id;
+        }
+      });
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('href') === '#' + current) tab.classList.add('active');
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveTab, { passive: true });
+  </script>
+
+</body>
+</html>

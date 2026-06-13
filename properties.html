@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Properties - MBX Homes | Los Angeles Vacation Rentals</title>
+  <meta name="description" content="Browse all MBX Homes vacation rentals and short-term stays in Los Angeles, Culver City, Big Bear, and more. 17 properties available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo-link">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="36" height="36">
+          <rect x="8" y="20" width="44" height="32" rx="2" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <polyline points="4,24 30,6 56,24" fill="none" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M22 52 V36 h16 v16" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <rect x="22" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+          <rect x="32" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">MBX</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="airbnb.html" class="nav-link" id="nav-airbnb">AIRBNB</a>
+        <a href="properties.html" class="nav-link active nav-dropdown-trigger" id="nav-properties">
+          All properties <span class="dropdown-arrow">▾</span>
+          <div class="dropdown-menu" id="nav-dropdown">
+            <a href="properties.html" class="dropdown-item">All Properties</a>
+            <a href="properties.html?type=vacation" class="dropdown-item">Vacation Homes</a>
+            <a href="properties.html?type=apartment" class="dropdown-item">Apartments</a>
+            <a href="properties.html?location=la" class="dropdown-item">Los Angeles</a>
+            <a href="properties.html?location=culver" class="dropdown-item">Culver City</a>
+            <a href="properties.html?location=bigbear" class="dropdown-item">Big Bear</a>
+          </div>
+        </a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact us</a>
+        <div class="currency-selector" id="currency-selector">
+          <span>USD</span>
+          <span class="dropdown-arrow">▾</span>
+          <div class="currency-dropdown">
+            <div class="currency-item active">USD - US Dollar</div>
+            <div class="currency-item">EUR - Euro</div>
+            <div class="currency-item">GBP - British Pound</div>
+            <div class="currency-item">CAD - Canadian Dollar</div>
+          </div>
+        </div>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FILTERS BAR -->
+  <div class="filters-bar" id="filters-bar">
+    <form class="filter-search-bar" id="filter-form" onsubmit="filterProperties(event)">
+      <div class="filter-field">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <select name="location" id="prop-location-select" style="flex:1">
+          <option value="">Location</option>
+          <option value="la">Los Angeles</option>
+          <option value="culver">Culver City</option>
+          <option value="bigbear">Big Bear</option>
+          <option value="dtla">Downtown LA</option>
+          <option value="venice">Venice Beach</option>
+        </select>
+      </div>
+      <div class="filter-field" style="border-right:1px solid #e0e0e0">
+        <input type="date" name="checkin" id="prop-checkin" placeholder="Check-in" />
+      </div>
+      <div class="filter-field" style="border-right:1px solid #e0e0e0">
+        <input type="date" name="checkout" id="prop-checkout" placeholder="Check-out" />
+      </div>
+      <div class="filter-field" style="border-right:1px solid #e0e0e0">
+        <select name="guests" id="prop-guests">
+          <option value="1">1 adult</option>
+          <option value="2">2 adults</option>
+          <option value="3">3 adults</option>
+          <option value="4">4 adults</option>
+          <option value="6">6 adults</option>
+          <option value="8">8 adults</option>
+        </select>
+      </div>
+      <button type="submit" class="filter-search-btn" id="filter-search-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </button>
+    </form>
+    <button class="more-filters-btn" id="more-filters-btn" onclick="toggleMoreFilters()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+      More filters
+    </button>
+  </div>
+
+  <!-- PROPERTIES LAYOUT -->
+  <div class="properties-page-layout" id="properties-layout">
+    <!-- LEFT: LIST -->
+    <div class="properties-sidebar" id="properties-sidebar">
+      <!-- Results header -->
+      <div class="results-header" id="results-header">
+        <span class="results-count" id="results-count">17 Results</span>
+        <div class="sort-dropdown">
+          <button class="sort-btn" id="sort-btn" onclick="toggleSort()">
+            Sort by Price (min-max) <span>▾</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Properties grid -->
+      <div class="properties-list-grid" id="properties-list-grid">
+
+        <a href="property-detail.html?id=5" class="property-card" id="list-prop-1">
+          <div class="card-image-wrapper">
+            <img src="images/prop5.png" alt="Big Bear Village Cabin" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Big Bear Village 1BD | Cabin</h3>
+            <p class="card-meta">Vacation Home · 4 Guests · 2 Beds</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=6" class="property-card" id="list-prop-2">
+          <div class="card-image-wrapper">
+            <img src="images/prop1.png" alt="Loft Style Spacious DTLA" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Loft Style | Spacious DTL...</h3>
+            <p class="card-meta">Apartment · 4 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine · Pool</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=7" class="property-card" id="list-prop-3">
+          <div class="card-image-wrapper">
+            <img src="images/prop2.png" alt="Huge Private Condo Downtown" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Huge Private Condo | Do...</h3>
+            <p class="card-meta">Apartment · 4 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine · Pool</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=8" class="property-card" id="list-prop-4">
+          <div class="card-image-wrapper">
+            <img src="images/prop3.png" alt="SB Home 3 Bedrooms" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">SB Home | 3 Bedrooms | C...</h3>
+            <p class="card-meta">Vacation Home · 6 Guests · 4 Beds</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=9" class="property-card" id="list-prop-5">
+          <div class="card-image-wrapper">
+            <img src="images/prop4.png" alt="Modern 1BR Heart of DTL" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Modern 1BR Heart of DTL...</h3>
+            <p class="card-meta">Apartment · 3 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=10" class="property-card" id="list-prop-6">
+          <div class="card-image-wrapper">
+            <img src="images/prop5.png" alt="Private Apartment Venice" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Private Apartment | Venic...</h3>
+            <p class="card-meta">Vacation Home · 2 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Washing machine</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=1" class="property-card" id="list-prop-7">
+          <div class="card-image-wrapper">
+            <img src="images/prop1.png" alt="Luxury HighRise Condo" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Luxury HighRise Condo | City Views</h3>
+            <p class="card-meta">Apartment · 3 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Gym</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=2" class="property-card" id="list-prop-8">
+          <div class="card-image-wrapper">
+            <img src="images/prop2.png" alt="2-Bedroom FREE Parking" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">2-Bedroom | FREE Parking | Pool</h3>
+            <p class="card-meta">Apartment · 4 Guests · 2 Beds</p>
+            <p class="card-amenities">Kitchen · Wifi · Pool · Parking</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=3" class="property-card" id="list-prop-9">
+          <div class="card-image-wrapper">
+            <img src="images/prop3.png" alt="1BD Condo Rooftop Pool" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">1BD | Condo | Rooftop Pool</h3>
+            <p class="card-meta">Apartment · 2 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Pool</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=4" class="property-card" id="list-prop-10">
+          <div class="card-image-wrapper">
+            <img src="images/prop4.png" alt="LUX Trendy Condo DTLA" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">LUX, Trendy, Spacious Condo | DTLA</h3>
+            <p class="card-meta">Apartment · 4 Guests · 2 Beds</p>
+            <p class="card-amenities">Kitchen · Wifi · Gym · Pool</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=11" class="property-card" id="list-prop-11">
+          <div class="card-image-wrapper">
+            <img src="images/prop5.png" alt="Sylmar Single Level Home" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sylmar Single Level Home | Hilltop</h3>
+            <p class="card-meta">Vacation Home · 8 Guests · 3 Beds</p>
+            <p class="card-amenities">Kitchen · Wifi · Parking</p>
+          </div>
+        </a>
+
+        <a href="property-detail.html?id=12" class="property-card" id="list-prop-12">
+          <div class="card-image-wrapper">
+            <img src="images/prop1.png" alt="Culver City Modern Studio" class="card-img" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Culver City Modern Studio</h3>
+            <p class="card-meta">Apartment · 2 Guests · 1 Bed</p>
+            <p class="card-amenities">Kitchen · Wifi · Gym</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: MAP -->
+    <div class="properties-map-panel" id="properties-map">
+      <iframe
+        class="map-embed"
+        id="map-embed"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d264673.8059813427!2d-118.24368!3d34.052235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus"
+        title="Map of Los Angeles vacation rentals"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="currency-footer" id="currency-footer">
+        <span>USD</span> <span class="dropdown-arrow">▾</span>
+      </div>
+      <div class="footer-social" id="footer-social">
+        <a href="https://www.youtube.com/@mbxhomes" target="_blank" rel="noopener" class="social-link" id="social-youtube" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/mbxhomes" target="_blank" rel="noopener" class="social-link" id="social-instagram" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright" id="footer-copyright">
+      <p>©2026 MBX HOMES All rights reserved - Powered by <a href="https://www.lodgify.com" target="_blank" rel="noopener" class="lodgify-link">Lodgify</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function filterProperties(e) {
+      e.preventDefault();
+      // Simulate filtering
+      const count = document.getElementById('results-count');
+      if (count) count.textContent = '17 Results';
+    }
+
+    function toggleMoreFilters() {
+      // Could expand a filter panel
+    }
+
+    function toggleSort() {
+      const btn = document.getElementById('sort-btn');
+      if (!btn) return;
+      const text = btn.textContent.trim();
+      if (text.startsWith('Sort by Price (min-max)')) {
+        btn.innerHTML = 'Sort by Price (max-min) <span>▾</span>';
+      } else {
+        btn.innerHTML = 'Sort by Price (min-max) <span>▾</span>';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIRBNB Listings - MBX Homes</title>
+  <meta name="description" content="Browse all MBX Homes listings on Airbnb. View our featured Airbnb properties and profile in Los Angeles and surrounding areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" id="logo-link">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="36" height="36">
+          <rect x="8" y="20" width="44" height="32" rx="2" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <polyline points="4,24 30,6 56,24" fill="none" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M22 52 V36 h16 v16" fill="none" stroke="#3d2b1f" stroke-width="2.5"/>
+          <rect x="22" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+          <rect x="32" y="28" width="6" height="6" rx="1" fill="none" stroke="#3d2b1f" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">MBX</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="airbnb.html" class="nav-link active" id="nav-airbnb">AIRBNB</a>
+        <a href="properties.html" class="nav-link nav-dropdown-trigger" id="nav-properties">
+          All properties <span class="dropdown-arrow">▾</span>
+          <div class="dropdown-menu" id="nav-dropdown">
+            <a href="properties.html" class="dropdown-item">All Properties</a>
+            <a href="properties.html?type=vacation" class="dropdown-item">Vacation Homes</a>
+            <a href="properties.html?type=apartment" class="dropdown-item">Apartments</a>
+            <a href="properties.html?location=la" class="dropdown-item">Los Angeles</a>
+            <a href="properties.html?location=culver" class="dropdown-item">Culver City</a>
+            <a href="properties.html?location=bigbear" class="dropdown-item">Big Bear</a>
+          </div>
+        </a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact us</a>
+        <div class="currency-selector" id="currency-selector">
+          <span>USD</span>
+          <span class="dropdown-arrow">▾</span>
+          <div class="currency-dropdown">
+            <div class="currency-item active">USD - US Dollar</div>
+            <div class="currency-item">EUR - Euro</div>
+            <div class="currency-item">GBP - British Pound</div>
+            <div class="currency-item">CAD - Canadian Dollar</div>
+          </div>
+        </div>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- AIRBNB CONTENT -->
+  <main class="airbnb-page" id="airbnb-page">
+    <a
+      href="https://www.airbnb.com/users/show/mbxhomes"
+      target="_blank"
+      rel="noopener"
+      class="airbnb-profile-link"
+      id="airbnb-profile-link"
+    >
+      AIRBNB PROFILE AND ALL LISTINGS
+    </a>
+    <p class="airbnb-subtitle" id="airbnb-subtitle">Featured AIRBNB Listings</p>
+
+    <!-- Airbnb featured listings grid -->
+    <div class="properties-grid" id="airbnb-grid" style="margin-top:8px">
+
+      <a href="property-detail.html?id=1" class="property-card" id="airbnb-prop-1">
+        <div class="card-image-wrapper">
+          <img src="images/prop1.png" alt="Luxury HighRise Condo" class="card-img" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Luxury HighRise Condo | City Views | Gym</h3>
+          <p class="card-location">
+            <svg class="pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e8604c"/></svg>
+            Los Angeles, United States
+          </p>
+          <p class="card-guests">Guests: 3</p>
+        </div>
+      </a>
+
+      <a href="property-detail.html?id=2" class="property-card" id="airbnb-prop-2">
+        <div class="card-image-wrapper">
+          <img src="images/prop2.png" alt="2-Bedroom Condo" class="card-img" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">2-Bedroom | FREE Parking | Pool | Gym</h3>
+          <p class="card-location">
+            <svg class="pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e8604c"/></svg>
+            Culver City, United States
+          </p>
+          <p class="card-guests">Guests: 4</p>
+        </div>
+      </a>
+
+      <a href="property-detail.html?id=4" class="property-card" id="airbnb-prop-3">
+        <div class="card-image-wrapper">
+          <img src="images/prop4.png" alt="LUX Trendy Condo" class="card-img" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">LUX, Trendy, Spacious Condo | DTLA</h3>
+          <p class="card-location">
+            <svg class="pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e8604c"/></svg>
+            Los Angeles, United States
+          </p>
+          <p class="card-guests">Guests: 4</p>
+        </div>
+      </a>
+
+      <a href="property-detail.html?id=5" class="property-card" id="airbnb-prop-4">
+        <div class="card-image-wrapper">
+          <img src="images/prop5.png" alt="Big Bear Cabin" class="card-img" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Big Bear Village 1BD | Cabin Retreat</h3>
+          <p class="card-location">
+            <svg class="pin-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#e8604c"/></svg>
+            Big Bear, United States
+          </p>
+          <p class="card-guests">Guests: 4</p>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- CTA box -->
+    <div style="margin-top:48px;background:#fff;border:1.5px solid #e0e0e0;border-radius:16px;padding:32px;max-width:560px;text-align:center">
+      <p style="font-size:13px;text-transform:uppercase;letter-spacing:2px;color:#e8604c;font-weight:600;margin-bottom:10px">AIRBNB</p>
+      <h2 style="font-size:1.3rem;font-weight:800;color:#1a1a1a;margin-bottom:12px">View All Our Airbnb Listings</h2>
+      <p style="font-size:14px;color:#666;line-height:1.6;margin-bottom:20px">Browse our full catalog of vacation rentals and short-term stays available on Airbnb in Los Angeles, Culver City, Big Bear, and more.</p>
+      <a href="https://www.airbnb.com/users/show/mbxhomes" target="_blank" rel="noopener" style="display:inline-block;background:#e8604c;color:#fff;border-radius:24px;padding:12px 28px;font-size:14px;font-weight:700;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#d4503c'" onmouseout="this.style.background='#e8604c'">
+        View Airbnb Profile →
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="currency-footer" id="currency-footer">
+        <span>USD</span> <span class="dropdown-arrow">▾</span>
+      </div>
+      <div class="footer-social" id="footer-social">
+        <a href="https://www.youtube.com/@mbxhomes" target="_blank" rel="noopener" class="social-link" id="social-youtube" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/mbxhomes" target="_blank" rel="noopener" class="social-link" id="social-instagram" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright" id="footer-copyright">
+      <p>©2026 MBX HOMES All rights reserved - Powered by <a href="https://www.lodgify.com" target="_blank" rel="noopener" class="lodgify-link">Lodgify</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
