@@ -1,5 +1,5 @@
 /* ===========================
-   MBX HOMES - Main JavaScript
+   CityLodge - Main JavaScript
    =========================== */
 
 // Set active nav link
